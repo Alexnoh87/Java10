@@ -7,7 +7,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetStationNumber() {
-        Radio rad = new Radio(11);
+        Radio rad = new Radio(11, 0, 0, 100, 0, 0);
 
         rad.setCurrentStationNumber(5);
 
@@ -18,7 +18,7 @@ public class RadioTest {
 
     @Test
     public void shouldNotSetStationNumberAboveMax() {
-        Radio rad = new Radio(12);
+        Radio rad = new Radio(12, 0, 0, 100, 0, 0);
 
         rad.setCurrentStationNumber(13);
 
@@ -40,7 +40,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetMaxStationNumber() {
-        Radio rad = new Radio(15);
+        Radio rad = new Radio(15, 0, 0, 100, 0, 0);
 
         rad.maxCurrentStationNumber();
 
@@ -51,7 +51,7 @@ public class RadioTest {
 
     @Test
     public void shouldNextStationNumber() {
-        Radio rad = new Radio(10);
+        Radio rad = new Radio(10, 0, 0, 100, 0 ,0);
 
         rad.setCurrentStationNumber(5);
         rad.nextStationNumber();
@@ -63,7 +63,7 @@ public class RadioTest {
 
     @Test
     public void shouldNextMoreMaxStationNumber() {
-        Radio rad = new Radio(10);
+        Radio rad = new Radio(10, 0, 0, 100, 0, 0);
 
         rad.setCurrentStationNumber(10);
         rad.nextStationNumber();
@@ -75,7 +75,7 @@ public class RadioTest {
 
     @Test
     public void shouldPrevStationNumber() {
-        Radio rad = new Radio(10);
+        Radio rad = new Radio(10, 0, 0, 100, 0, 0);
 
         rad.setCurrentStationNumber(7);
         rad.prevStationNumber();
